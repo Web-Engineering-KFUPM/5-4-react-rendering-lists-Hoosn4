@@ -138,13 +138,16 @@ export default function App() {
       </header>
 
       <section className="grid">
-        {/* TODO (TASK 1): Render all courses using courses.map(...)
-      For each course render <CourseCard /> and pass:
-        - key={course.id}
-        - course={course}
-        - index={idx}
-        - onMutateCourse={mutateCourseByIndex}
-  */}
+        {<section className="grid">
+  {courses.map((course, idx) => (
+    <CourseCard 
+      key={course.id} 
+      course={course} 
+      index={idx} 
+      onMutateCourse={mutateCourseByIndex} 
+    />
+  ))}
+</section>}
       </section>
     </main>
   );
